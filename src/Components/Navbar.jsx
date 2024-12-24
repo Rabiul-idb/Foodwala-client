@@ -76,9 +76,9 @@ const Navbar = () => {
                             
                             <li className="block lg:hidden"><a>{user?.displayName}</a></li>
                             {/* <li><a>{user?.email}</a></li> */}
-                            <li className="font-semibold"><a>My Foods</a></li>
-                            <li className="font-semibold"><a>Add Food</a></li>
-                            <li className="font-semibold"><a>My Order</a></li>
+                            <li className="font-semibold"><Link to={"/myFoods"}>My Foods</Link></li>
+                            <li className="font-semibold"><Link to={"/addFood"}>Add Food</Link></li>
+                            <li className="font-semibold"><Link to={"/myOrder"}>My Order</Link></li>
                             <li>
                                 <Link to={"/updateUserInfo"} className="justify-between text-info">
                                 update profile

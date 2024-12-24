@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import bannerImg from '../assets/images/bannerImg.png';
 
 const Banner = () => {
@@ -9,7 +10,7 @@ const Banner = () => {
                     <h1 className="text-6xl font-bold leading-tight mt-5">Lettuce with <span className='text-red-600 underline'>Chicken</span> Chopped Salad</h1>
                     <p className="text-lg font-base mt-3"> A deliciously grilled dish consisting of two perfectly cooked chops, garnished with fresh herbs with healthy salad made with a mix of fresh vegetables, including cucumber slices. 
                     </p>
-                    <button className='btn text-lg bg-red-600 text-white mt-6 px-8'>view all</button>
+                    <Link to={"/allFoods"} className='btn text-lg bg-red-600 text-white mt-6 px-8 hover:bg-red-700'>view all</Link>
                 </div>
                 <div className="banner-img">
                     <img src={bannerImg} alt="" />

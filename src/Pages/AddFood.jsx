@@ -40,15 +40,15 @@ const AddFood = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            // if(data.insertedId){
-            //     Swal.fire({
-            //       title: 'Success!',
-            //       text: 'Food Item Added Successfully',
-            //       icon: 'success',
-            //       confirmButtonText: 'Cool'
-            //     })
-            //     //form.reset();
-            //   }
+            if(data.insertedId){
+                Swal.fire({
+                  title: 'Success!',
+                  text: 'Food Item Added Successfully',
+                  icon: 'success',
+                  confirmButtonText: 'Cool'
+                })
+                form.reset();
+              }
         })
 
     }
@@ -107,7 +107,7 @@ const AddFood = () => {
             <label className="">Food Origin:</label>
             <br></br>
             <select onChange={handleOnChange} value={selectedOption} className="input input-bordered border-red-600 w-full mt-1">
-                <option value="bangladeshi">Bangladeshi</option>
+                <option selected value="bangladeshi">Bangladeshi</option>
                 <option value="asian">Asian</option>
                 <option value="indian">Indian</option>
                 <option value="italian">Italy</option>

@@ -11,3 +11,7 @@ body{
 .font-lobster{
   font-family: "Lobster", serif;
 }
+
+.foodCard:hover .price{
+  display: block;
+}

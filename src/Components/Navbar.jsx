@@ -44,11 +44,11 @@ const Navbar = () => {
             <div>
                 <ul className="hidden lg:flex gap-6 ">
                     <li><NavLink to={"/"} className="text-base font-semibold">Home</NavLink></li>
-                    <li><NavLink to={"/about"} className="text-base font-semibold">About</NavLink></li>
-                    {
+                    <li><NavLink to={"/allFoods"} className="text-base font-semibold">All Foods</NavLink></li>
+                    {/* {
                         user?.email && (<li><NavLink to={"/dashboard"} className="text-base font-semibold">Dashboard</NavLink></li>) 
-                    }
-                    <li><NavLink to={"/contact"} className="text-base font-semibold">Contact</NavLink></li>
+                    } */}
+                    <li><NavLink to={"/gallary"} className="text-base font-semibold">Gallary</NavLink></li>
 
                     
                 </ul>
@@ -75,7 +75,10 @@ const Navbar = () => {
                             className={`menu menu-sm dropdown-content bg-base-100 rounded-box z-[10] w-52 p-2 shadow ${show ? "block" : 'hidden'}`}>
                             
                             <li className="block lg:hidden"><a>{user?.displayName}</a></li>
-                            <li><a>{user?.email}</a></li>
+                            {/* <li><a>{user?.email}</a></li> */}
+                            <li className="font-semibold"><a>My Foods</a></li>
+                            <li className="font-semibold"><a>Add Food</a></li>
+                            <li className="font-semibold"><a>My Order</a></li>
                             <li>
                                 <Link to={"/updateUserInfo"} className="justify-between text-info">
                                 update profile
@@ -107,11 +110,11 @@ const Navbar = () => {
                     <div className="divider divider-info"></div>
                    
                         <li><NavLink to={"/"} className="text-base font-semibold">Home</NavLink></li>
-                        <li><NavLink to={"/about"} className="text-base font-semibold">About</NavLink></li>
+                        <li><NavLink to={"/allFoods"} className="text-base font-semibold">All Foods</NavLink></li>
                         {
                             // user?.email && (<li><NavLink to={"/dashboard"} className="text-base font-semibold">Dashboard</NavLink></li>) 
                         }
-                        <li><NavLink to={"/contact"} className="text-base font-semibold">Contact</NavLink></li>
+                        <li><NavLink to={"/gallary"} className="text-base font-semibold">Gallary</NavLink></li>
 
                     </ul>
                 </div>

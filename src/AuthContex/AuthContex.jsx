@@ -10,15 +10,15 @@ const AuthContex = ({children}) => {
 
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
-    const [allFoods, setAllFoods] = useState([]);
+   // const [allFoods, setAllFoods] = useState([]);
     const [purchased, setPurchased] = useState(0)
 
     // load all food item
-    useEffect(() =>{
-        fetch('http://localhost:5000/allFoodItems')
-        .then(response => response.json())
-        .then(data => setAllFoods(data))
-    }, [])
+    // useEffect(() =>{
+    //     fetch('http://localhost:5000/allFoodItems')
+    //     .then(response => response.json())
+    //     .then(data => setAllFoods(data))
+    // }, [])
 
     // create new user with email and password
     const createNewUser = (email, password) =>{
@@ -68,7 +68,6 @@ const AuthContex = ({children}) => {
         loginWithGoogle,
         setLoading,
         loading,
-        allFoods,
         purchased, 
         setPurchased,
     }

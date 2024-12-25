@@ -8,6 +8,10 @@ body{
   font-family: 'Inter', sans-serif;
 }
 
+.active{
+  color: rgb(204 0 0)
+}
+
 .font-lobster{
   font-family: "Lobster", serif;
 }

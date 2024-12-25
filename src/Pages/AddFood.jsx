@@ -19,7 +19,7 @@ const AddFood = () => {
     const foodCategory = form.foodCategory.value;
     const foodPrice = form.foodPrice.value;
     const foodQty = form.foodQty.value;
-    const foodOrigin = selectedOption;
+    const foodOrigin = form.foodOrigin.value;
     const foodImg = form.foodImg.value;
     const foodDesc = form.foodDesc.value;
     const userName = form.userName.value;
@@ -125,6 +125,7 @@ const AddFood = () => {
           <select
             onChange={handleOnChange}
             value={selectedOption}
+            name="foodOrigin"
             className="input input-bordered border-red-600 w-full mt-1"
           >
             <option selected value="bangladeshi">

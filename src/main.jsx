@@ -16,6 +16,7 @@ import MyFoods from './Pages/MyFoods';
 import MyOrder from './Pages/MyOrder';
 import FoodDetails from './Pages/FoodDetails';
 import UpdateFoodInfo from './Pages/UpdateFoodInfo';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -29,7 +30,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/allFoods",
-        element: <AllFoods></AllFoods>
+        element: <AllFoods></AllFoods>,
+        loader: ()=>
+          fetch('http://localhost:5000/allFoodItems')
       },
       {
         path: "/gallary",
@@ -37,17 +40,23 @@ const router = createBrowserRouter([
       },
       {
         path: "/addFood",
-        element: <AddFood></AddFood>
+        element: <PrivateRoute>
+          <AddFood></AddFood>
+        </PrivateRoute>
       },
       {
         path: "/myFoods/:email",
-        element: <MyFoods></MyFoods>,
+        element: <PrivateRoute>
+           <MyFoods></MyFoods>
+        </PrivateRoute>,
         loader: ({params})=> 
           fetch(`http://localhost:5000/allFoodItems/${params.email}`),
       },
       {
         path: "/food/updateFoodInfo/:id",
-        element: <UpdateFoodInfo></UpdateFoodInfo>,
+        element: <PrivateRoute>
+          <UpdateFoodInfo></UpdateFoodInfo>
+        </PrivateRoute>,
         loader: ({params}) =>
           fetch(`http://localhost:5000/food/foodDetails/${params.id}`)
       },
@@ -71,7 +80,9 @@ const router = createBrowserRouter([
       },
       {
        path: "/updateUserInfo",
-       element: <UpdateUserInfo></UpdateUserInfo>
+       element: <PrivateRoute>
+        <UpdateUserInfo></UpdateUserInfo>
+       </PrivateRoute>
       }
     ]
   },

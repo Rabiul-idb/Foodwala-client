@@ -1,11 +1,16 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { contextProvider } from "../AuthContex/AuthContex";
 import FoodItem from "../Components/FoodItem";
+import { useLoaderData } from "react-router-dom";
 
 
 const AllFoods = () => {
 
-    const {allFoods} = useContext(contextProvider);
+    //const {} = useContext(contextProvider);
+
+    const allData = useLoaderData();
+    //console.log(allData)
+    const [allFoodData, setAllFoodData] = useState(allData)
     
 
     return (
@@ -19,7 +24,7 @@ const AllFoods = () => {
                 </p>
                 <div className="grid grid-cols-3 gap-6 my-10">
                     {
-                        allFoods.map(item => <FoodItem
+                        allFoodData.map(item => <FoodItem
                         item ={item}
                         ></FoodItem>)
                     }

@@ -81,7 +81,7 @@ const Navbar = () => {
                             <li className="font-semibold"><Link to={"/myOrder"}>My Order</Link></li>
                             <li>
                                 <Link to={"/updateUserInfo"} className="justify-between text-info">
-                                update profile
+                                Update profile
                                 </Link>
                             </li>
                             <li onClick={handleLogOut} className="font-semibold text-red-500"><a>Logout</a></li>

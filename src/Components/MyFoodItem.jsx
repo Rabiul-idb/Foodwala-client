@@ -25,7 +25,7 @@ const MyFoodItem = ({item}) => {
                         <FcViewDetails />
                         </Link>
                         <Link
-                        // to={`/updateEquipment/${item?._id}`}
+                         to={`/food/updateFoodInfo/${_id}`}
                         className="btn text-blue-800 text-lg btn-link"
                         title="edit"
                         >

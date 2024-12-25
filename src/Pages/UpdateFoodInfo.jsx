@@ -1,72 +1,70 @@
 import { useContext, useState } from "react";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { contextProvider } from "../AuthContex/AuthContex";
 import Swal from "sweetalert2";
 
-const AddFood = () => {
-  const { user } = useContext(contextProvider);
-  const [selectedOption, setSelectedOption] = useState("");
+const UpdateFoodInfo = () => {
 
-  const handleOnChange = (e) => {
-    setSelectedOption(e.target.value);
-  };
+    const {user} = useContext(contextProvider);
 
-  const handleAddFood = (e) => {
-    e.preventDefault();
+    const navigate = useNavigate();
+    const {_id, foodName, foodOrigin, foodPrice, foodQty, foodDesc, foodImg, foodCategory} = useLoaderData();
+   // console.log(foodName, foodOrigin)
 
-    const form = e.target;
+    const [selectedOption, setSelectedOption] = useState("");
+    const handleOnChange = (e)=>{
+        setSelectedOption(e.target.value);
+    }
+   // console.log(selectedOption);
 
-    const foodName = form.foodName.value;
-    const foodCategory = form.foodCategory.value;
-    const foodPrice = form.foodPrice.value;
-    const foodQty = form.foodQty.value;
-    const foodOrigin = selectedOption;
-    const foodImg = form.foodImg.value;
-    const foodDesc = form.foodDesc.value;
-    const userName = form.userName.value;
-    const userEmail = form.userEmail.value;
 
-    const newItem = {
-      foodName,
-      foodCategory,
-      foodPrice,
-      foodQty,
-      foodOrigin,
-      foodImg,
-      foodDesc,
-      userName,
-      userEmail,
-    };
-    console.log(newItem);
+    const handleUpdateFood = (e) =>{
+        e.preventDefault();
+        const form = e.target;
 
-    fetch("http://localhost:5000/addFood", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newItem),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.insertedId) {
-          Swal.fire({
-            title: "Success!",
-            text: "Food Item Added Successfully",
-            icon: "success",
-            confirmButtonText: "Cool",
-          });
-          form.reset();
-        }
-      });
-  };
+        const foodName = form.foodName.value;
+        const foodCategory = form.foodCategory.value;
+        const foodPrice = form.foodPrice.value;
+        const foodQty = form.foodQty.value;
+        const foodOrigin = form.foodOrigin.value;
+        const foodImg = form.foodImg.value;
+        const foodDesc = form.foodDesc.value;
+        // const userName = form.userName.value;
+        // const userEmail = form.userEmail.value;
+    
+        const updateFood = {foodName, foodCategory, foodPrice, foodQty, foodOrigin, foodImg, foodDesc};
+       
+
+        fetch(`http://localhost:5000/updateFood/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updateFood),
+        })
+        .then(res => res.json())
+        .then(data => {
+           // console.log(data);
+            if(data.modifiedCount > 0){
+                Swal.fire({
+                  title: 'Success!',
+                  text: 'Data Updated Successfully',
+                  icon: 'success',
+                  confirmButtonText: 'ok'
+                })
+                form.reset();
+                navigate(`/myFoods/${user?.email}`);
+            }
+        })
+    }
 
   return (
     <div>
       <h2 className="text-2xl font-semibold text-black text-center my-6">
-        Add Food with the required field
+        Update Food Information
       </h2>
       <form
-        onSubmit={handleAddFood}
+        onSubmit={handleUpdateFood}
         className="max-w-5xl mx-auto p-6 bg-gray-100 shadow-lg border rounded-md space-y-4 mb-5"
       >
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-6">
@@ -77,6 +75,7 @@ const AddFood = () => {
             <input
               type="text"
               name="foodName"
+              defaultValue={foodName}
               placeholder="Food Name"
               required
               className="input input-bordered border-red-600 w-full mt-1 "
@@ -89,6 +88,7 @@ const AddFood = () => {
             <input
               type="text"
               name="foodCategory"
+              defaultValue={foodCategory}
               placeholder="Food Category"
               required
               className="input input-bordered border-red-600 w-full mt-1 "
@@ -101,6 +101,7 @@ const AddFood = () => {
             <input
               type="text"
               name="foodPrice"
+              defaultValue={foodPrice}
               placeholder="Food Price"
               required
               className="input input-bordered border-red-600 w-full mt-1 "
@@ -113,6 +114,7 @@ const AddFood = () => {
             <input
               type="number"
               name="foodQty"
+              defaultValue={foodQty}
               placeholder="Food Quantity"
               required
               className="input input-bordered border-red-600 w-full mt-1 "
@@ -125,6 +127,7 @@ const AddFood = () => {
           <select
             onChange={handleOnChange}
             value={selectedOption}
+            name="foodOrigin"
             className="input input-bordered border-red-600 w-full mt-1"
           >
             <option selected value="bangladeshi">
@@ -142,6 +145,7 @@ const AddFood = () => {
           <input
             type="text"
             name="foodImg"
+            defaultValue={foodImg}
             placeholder="Food Image URL"
             required
             className="input input-bordered border-red-600 w-full mt-1 "
@@ -154,6 +158,7 @@ const AddFood = () => {
           <textarea
             type="text"
             name="foodDesc"
+            defaultValue={foodDesc}
             placeholder="Food Description"
             required
             className="input input-bordered border-red-600 w-full mt-1 "
@@ -188,7 +193,7 @@ const AddFood = () => {
         </div>
         <div>
           <button className="btn bg-red-600 text-white hover:bg-red-700 block mx-auto px-10 text-lg font-semibold mt-5">
-            Add Food
+            Update Food
           </button>
         </div>
       </form>
@@ -196,4 +201,4 @@ const AddFood = () => {
   );
 };
 
-export default AddFood;
+export default UpdateFoodInfo;

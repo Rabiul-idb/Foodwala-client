@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { contextProvider } from "../AuthContex/AuthContex";
 import { useLoaderData } from "react-router-dom";
 import MyFoodItem from "../Components/MyFoodItem";
@@ -9,7 +9,8 @@ const MyFoods = () => {
     const {user} = useContext(contextProvider);
 
     const myFoodItems = useLoaderData();
-    console.log(myFoodItems)
+    //console.log(myFoodItems)
+    const [foods, setFoods] = useState(myFoodItems);
 
     return (
         <div className="bg-[#fef5ee]">
@@ -19,7 +20,12 @@ const MyFoods = () => {
                 
                 <div className="grid grid-cols-3 gap-6 my-10">
                     {
-                        myFoodItems.map(item => <MyFoodItem item={item}></MyFoodItem>)
+                        foods.map(item => <MyFoodItem
+                             item={item} 
+                             foods = {foods}
+                             setFoods = {setFoods}
+                             > 
+                             </MyFoodItem>)
                     }
                 </div>
             </div>

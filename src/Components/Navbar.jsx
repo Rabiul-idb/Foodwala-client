@@ -78,7 +78,7 @@ const Navbar = () => {
                             {/* <li><a>{user?.email}</a></li> */}
                             <li className="font-semibold"><Link to={`/myFoods/${user?.email}`}>My Foods</Link></li>
                             <li className="font-semibold"><Link to={"/addFood"}>Add Food</Link></li>
-                            <li className="font-semibold"><Link to={"/myOrder"}>My Order</Link></li>
+                            <li className="font-semibold"><Link to={`/myOrder/${user?.email}`}>My Order</Link></li>
                             <li>
                                 <Link to={"/updateUserInfo"} className="justify-between text-info">
                                 Update profile

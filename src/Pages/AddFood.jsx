@@ -24,6 +24,7 @@ const AddFood = () => {
     const foodDesc = form.foodDesc.value;
     const userName = form.userName.value;
     const userEmail = form.userEmail.value;
+    const purchased = 0;
 
     const newItem = {
       foodName,
@@ -35,6 +36,7 @@ const AddFood = () => {
       foodDesc,
       userName,
       userEmail,
+      purchased
     };
     console.log(newItem);
 
@@ -47,7 +49,7 @@ const AddFood = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        //console.log(data);
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",

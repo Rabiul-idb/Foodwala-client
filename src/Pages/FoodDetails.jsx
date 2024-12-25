@@ -5,9 +5,10 @@ import { contextProvider } from "../AuthContex/AuthContex";
 
 const FoodDetails = () => {
 
-    const {purchased, setPurchased} = useContext(contextProvider);
+    const {totalPurchased, setTotalPurchased} = useContext(contextProvider);
 
-    const {_id, foodName, foodOrigin, foodPrice, foodQty, foodDesc, foodImg, foodCategory} = useLoaderData();
+    const {_id, foodName, foodOrigin, foodPrice, foodQty, foodDesc, foodImg, foodCategory, purchased} = useLoaderData();
+    setTotalPurchased(purchased);
 
     const navigate = useNavigate();
     
@@ -25,9 +26,9 @@ const FoodDetails = () => {
                         <p className="text-lg font-semibold text-gray-600">Category: <span className="text-red-600">{foodCategory}</span></p>
                         <p className="text-lg font-semibold text-gray-600">Price: <span className="text-red-600">{foodPrice}$</span></p>
                         <p className="text-lg font-semibold text-gray-600">Available Quantity: <span className="text-red-600">{foodQty}</span></p>
-                        <p className="text-lg font-semibold text-gray-600">Total Purchased: <span className="text-red-600">{purchased} times</span></p>
+                        <p className="text-lg font-semibold text-gray-600">Total Purchased: <span className="text-red-600">{totalPurchased} times</span></p>
                         <p className="text-lg font-medium text-gray-600 mt-6 mb-10 ">{foodDesc}</p>
-                        <Link className="btn bg-red-600 hover:bg-red-700 text-lg text-white">Purchase</Link>
+                        <Link to={`/purchase/${_id}`} className="btn bg-red-600 hover:bg-red-700 text-lg text-white">Purchase</Link>
                         <button onClick={()=> navigate(-1)} className="btn  text-lg ml-6">Go back</button>
                     </div>
                 </div>

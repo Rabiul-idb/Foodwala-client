@@ -11,7 +11,7 @@ const AuthContex = ({children}) => {
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
    // const [allFoods, setAllFoods] = useState([]);
-    const [purchased, setPurchased] = useState(0)
+    const [totalPurchased, setTotalPurchased] = useState();
 
     // load all food item
     // useEffect(() =>{
@@ -68,8 +68,8 @@ const AuthContex = ({children}) => {
         loginWithGoogle,
         setLoading,
         loading,
-        purchased, 
-        setPurchased,
+        totalPurchased, 
+        setTotalPurchased,
     }
 
     return (

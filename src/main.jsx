@@ -17,12 +17,14 @@ import MyOrder from './Pages/MyOrder';
 import FoodDetails from './Pages/FoodDetails';
 import UpdateFoodInfo from './Pages/UpdateFoodInfo';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Error from './Pages/Error';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayOut></MainLayOut>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",

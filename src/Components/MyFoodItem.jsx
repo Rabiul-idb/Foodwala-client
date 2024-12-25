@@ -17,13 +17,13 @@ const MyFoodItem = ({item}) => {
                         <p className="font-semibold text-base">Available Qty: {foodQty}</p>
                     </div>
                     <div>
-                    <button
-                        // onClick={() => ViewDetails(item._id)}
+                        <Link
+                        to={`/food/foodDetails/${_id}`}
                         className="btn text-green-500 text-lg btn-link"
                         title="Food Details"
                         >
                         <FcViewDetails />
-                        </button>
+                        </Link>
                         <Link
                         // to={`/updateEquipment/${item?._id}`}
                         className="btn text-blue-800 text-lg btn-link"

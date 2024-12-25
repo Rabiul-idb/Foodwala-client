@@ -10,7 +10,6 @@ const HomePage = () => {
             <Banner></Banner>
             <Certificate></Certificate>
             <TopMenus></TopMenus>
-            <StayConnected></StayConnected>
         </div>
     );
 };

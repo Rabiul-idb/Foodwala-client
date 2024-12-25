@@ -55,7 +55,7 @@ const UpdateUserInfo = () => {
          
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-info">Update</button>
+          <button className="btn bg-red-600 text-white text-lg hover:bg-red-700">Update</button>
         </div>
       </form>
     </div>

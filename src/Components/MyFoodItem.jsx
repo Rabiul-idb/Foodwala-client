@@ -49,7 +49,7 @@ const MyFoodItem = ({item, foods, setFoods}) => {
             <img src={foodImg} className="w-full rounded-xl object-cover hover:scale-105 duration-500" alt="" />
             <div className="px-2">
                 <h2 className="font-bold text-xl mt-3 ">{foodName}</h2>
-                <div className="flex justify-between items-center mt-3">
+                <div className="flex justify-between items-center flex-wrap gap-1 mt-3">
                     <div>
                         <p className="font-semibold text-base">Origin: {foodOrigin}</p>
                         <p className="font-semibold text-base">Available Qty: {foodQty}</p>
@@ -57,7 +57,7 @@ const MyFoodItem = ({item, foods, setFoods}) => {
                     <div>
                         <Link
                         to={`/food/foodDetails/${_id}`}
-                        className="btn text-green-500 text-lg btn-link"
+                        className="btn text-green-500 text-lg btn-link "
                         title="Food Details"
                         >
                         <FcViewDetails />

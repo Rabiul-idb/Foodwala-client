@@ -59,8 +59,9 @@ const UpdateFoodInfo = () => {
     }
 
   return (
-    <div>
-      <h2 className="text-2xl font-semibold text-black text-center my-6">
+    <div className="bg-[#fef5ee] py-6">
+      <span className='md:text-xl text-lg font-bold font-lobster text-red-600 pt-1 text-center block'>Update</span>
+      <h2 className="text-2xl font-semibold text-black text-center mb-6 mt-3">
         Update Food Information
       </h2>
       <form
@@ -192,7 +193,7 @@ const UpdateFoodInfo = () => {
           </div>
         </div>
         <div>
-          <button className="btn bg-red-600 text-white hover:bg-red-700 block mx-auto px-10 text-lg font-semibold mt-5">
+          <button className="btn bg-red-600 text-white hover:bg-red-700 block mx-auto px-10 sm:text-lg font-semibold mt-5">
             Update Food
           </button>
         </div>

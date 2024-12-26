@@ -55,7 +55,7 @@ const MyOrderItem = ({item, orders, setOrders}) => {
             
                 <button
                 onClick={() => handleDeleteOrder(_id)}
-                className="btn text-red-500 text-lg border border-red-600 mt-3"
+                className="btn text-red-500 btn-sm md:text-lg border border-red-600 mt-3"
                 title="delete"
                 > Delete Order
                 <RiDeleteBin6Line />

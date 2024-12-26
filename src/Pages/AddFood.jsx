@@ -63,8 +63,9 @@ const AddFood = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-2xl font-semibold text-black text-center my-6">
+    <div className="bg-[#fef5ee] py-6">
+        <span className='md:text-xl text-lg font-bold font-lobster text-red-600 pt-1 text-center block'>Add</span>
+      <h2 className="md:text-2xl text-xl font-semibold text-black text-center mb-6 mt-2">
         Add Food with the required field
       </h2>
       <form
@@ -190,7 +191,7 @@ const AddFood = () => {
           </div>
         </div>
         <div>
-          <button className="btn bg-red-600 text-white hover:bg-red-700 block mx-auto px-10 text-lg font-semibold mt-5">
+          <button className="btn bg-red-600 text-white hover:bg-red-700 block mx-auto px-10 md:text-lg font-semibold mt-5">
             Add Food
           </button>
         </div>

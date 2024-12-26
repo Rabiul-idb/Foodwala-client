@@ -12,11 +12,11 @@ const MyOrder = () => {
     return (
         <div className="bg-[#fef5ee]">
             <div className="w-11/12 mx-auto pb-7">
-                <span className='text-xl font-bold font-lobster text-red-600 pt-3 text-center block'>My Orders</span>
-                <h2 className="text-2xl font-semibold text-black text-center mt-2 mb-1">My Food Orders</h2>
+                <span className='md:text-xl text-lg font-bold font-lobster text-red-600 pt-3 text-center block'>My Orders</span>
+                <h2 className="md:text-2xl text-xl font-semibold text-black text-center mt-2 mb-1">My Food Orders</h2>
                 
                 {
-                    orders.length > 0 ? <div className="grid grid-cols-3 gap-6 my-10">
+                    orders.length > 0 ? <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 my-10">
                     {
                         orders.map(item => <MyOrderItem
                              item={item} 

@@ -99,8 +99,9 @@ const FoodPurchase = () => {
 
   return (
     <div className="bg-[#fef5ee] py-5">
-      <h2 className="text-2xl font-semibold text-black text-center my-6">
-        Purchase Food with the required field
+        <span className='md:text-xl text-lg font-bold font-lobster text-red-600 pt-1 text-center block'>Purchase</span>
+      <h2 className="sm:text-2xl text-xl font-semibold text-black text-center mt-2 mb-6">
+        Purchase Food 
       </h2>
       <form onSubmit={handlePurchase} className="max-w-4xl mx-auto p-6 bg-gray-100 shadow-lg border rounded-md space-y-4 mb-5">
         <div className="flex flex-col space-y-2 gap-2">
@@ -118,7 +119,7 @@ const FoodPurchase = () => {
             />
           </div>
           {/* Food Price */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-6">
             <div>
                 <label className="">Food Price($):</label>
                 <br></br>
@@ -148,7 +149,7 @@ const FoodPurchase = () => {
           </div>
           
           {/* Food quantity */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-6">
             <div>
                 <label className="">Avilable Quantity:</label>
                 <br></br>
@@ -174,7 +175,7 @@ const FoodPurchase = () => {
                 />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-6">
              {/*User Name*/}
             <div>
                 <label className="">Buyer Name:</label>
@@ -212,7 +213,7 @@ const FoodPurchase = () => {
               className="input bg-gray-100 input-bordered border-red-600 w-full mt-1 "
             />
           </div>
-          <button className="btn text-lg text-white bg-red-600 hover:bg-red-700 block mx-auto">Purchase</button>
+          <button className="btn sm:text-lg text-white bg-red-600 hover:bg-red-700 block mx-auto">Purchase</button>
 
 
         </div>

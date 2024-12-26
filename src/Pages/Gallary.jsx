@@ -52,8 +52,8 @@ const Gallery = () => {
   return (
     <div className="bg-[#fef5ee]">
     <div className="">
-        <span className='text-xl font-bold font-lobster text-red-600 pt-3 text-center block'>Gallary</span>
-        <h2 className="text-2xl font-semibold text-black text-center mt-2 mb-1">Our Food Gallary</h2>
+        <span className='md:text-xl text-lg font-bold font-lobster text-red-600 pt-3 text-center block'>Gallary</span>
+        <h2 className="md:text-2xl text-xl font-semibold text-black text-center mt-2 mb-1">Our Food Gallary</h2>
     </div>
       <div className="p-8">
         <RowsPhotoAlbum

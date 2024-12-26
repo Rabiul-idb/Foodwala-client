@@ -35,7 +35,7 @@ const UpdateFoodInfo = () => {
         const updateFood = {foodName, foodCategory, foodPrice, foodQty, foodOrigin, foodImg, foodDesc};
        
 
-        fetch(`http://localhost:5000/updateFood/${_id}`, {
+        fetch(`https://foodwala-server.vercel.app/updateFood/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

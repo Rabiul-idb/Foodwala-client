@@ -40,7 +40,7 @@ const AddFood = () => {
     };
     console.log(newItem);
 
-    fetch("http://localhost:5000/addFood", {
+    fetch("https://foodwala-server.vercel.app/addFood", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

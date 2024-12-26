@@ -22,7 +22,7 @@ const MyFoodItem = ({item, foods, setFoods}) => {
            confirmButtonText: "Yes, delete it!",
          }).then((result) => {
            if (result.isConfirmed) {
-             fetch(`http://localhost:5000/myFoods/${id}`, {
+             fetch(`https://foodwala-server.vercel.app/myFoods/${id}`, {
                method: "DELETE",
              })
                .then((res) => res.json())

@@ -15,7 +15,7 @@ const AuthContex = ({children}) => {
 
     // load all food item
     // useEffect(() =>{
-    //     fetch('http://localhost:5000/allFoodItems')
+    //     fetch('https://foodwala-server.vercel.app/allFoodItems')
     //     .then(response => response.json())
     //     .then(data => setAllFoods(data))
     // }, [])

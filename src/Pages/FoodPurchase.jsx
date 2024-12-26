@@ -71,7 +71,7 @@ const FoodPurchase = () => {
             return;
         }
 
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://foodwala-server.vercel.app/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         path: "/allFoods",
         element: <AllFoods></AllFoods>,
         loader: ()=>
-          fetch('http://localhost:5000/allFoodItems')
+          fetch('https://foodwala-server.vercel.app/allFoodItems')
       },
       {
         path: "/gallary",
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
            <MyFoods></MyFoods>
         </PrivateRoute>,
         loader: ({params})=> 
-          fetch(`http://localhost:5000/allFoodItems/${params.email}`),
+          fetch(`https://foodwala-server.vercel.app/allFoodItems/${params.email}`),
       },
       {
         path: "/food/updateFoodInfo/:id",
@@ -61,13 +61,13 @@ const router = createBrowserRouter([
           <UpdateFoodInfo></UpdateFoodInfo>
         </PrivateRoute>,
         loader: ({params}) =>
-          fetch(`http://localhost:5000/food/foodDetails/${params.id}`)
+          fetch(`https://foodwala-server.vercel.app/food/foodDetails/${params.id}`)
       },
       {
         path: "/food/foodDetails/:id",
         element:<FoodDetails></FoodDetails>,
         loader: ({params}) =>
-          fetch(`http://localhost:5000/food/foodDetails/${params.id}`)
+          fetch(`https://foodwala-server.vercel.app/food/foodDetails/${params.id}`)
       },
       {
         path: "/purchase/:id",
@@ -75,7 +75,7 @@ const router = createBrowserRouter([
           <FoodPurchase></FoodPurchase>
         </PrivateRoute>,
         loader: ({params}) =>
-          fetch(`http://localhost:5000/food/foodDetails/${params.id}`)
+          fetch(`https://foodwala-server.vercel.app/food/foodDetails/${params.id}`)
       },
       {
         path: "/myOrder/:email",
@@ -83,7 +83,7 @@ const router = createBrowserRouter([
           <MyOrder></MyOrder>
         </PrivateRoute>,
         loader: ({params}) => 
-          fetch(`http://localhost:5000/orders/${params.email}`)
+          fetch(`https://foodwala-server.vercel.app/orders/${params.email}`)
       },
       {
         path: "/login",

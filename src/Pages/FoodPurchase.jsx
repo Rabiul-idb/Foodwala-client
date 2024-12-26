@@ -28,6 +28,7 @@ const FoodPurchase = () => {
         e.preventDefault();
 
         const form = e.target;
+        const foodId = _id;
         const foodName = form.foodName.value;
         const foodPrice = form.foodPrice.value;
         //const totalPrice = totalPrice;
@@ -40,8 +41,8 @@ const FoodPurchase = () => {
         const currentDate = new Date(); 
         const orderedTime = currentDate.toLocaleTimeString(); 
 
-        const newOrder = {foodName, foodImg, foodPrice, totalPrice, availableQty, orderQty, buyerName, buyerEmail, foodOwner, foodOwnerEmail, orderedTime}
-       // console.log(newOrder);
+        const newOrder = {foodId, foodName, foodImg, foodPrice, totalPrice, availableQty, orderQty, buyerName, buyerEmail, foodOwner, foodOwnerEmail, orderedTime}
+       console.log(newOrder);
 
        if(availableQty === 0){
             Swal.fire({
@@ -80,7 +81,7 @@ const FoodPurchase = () => {
         })
         .then(res => res.json())
         .then(data => {
-            //console.log(data);
+            console.log(data);
             if (data.insertedId) {
                 Swal.fire({
                   title: "Success!",

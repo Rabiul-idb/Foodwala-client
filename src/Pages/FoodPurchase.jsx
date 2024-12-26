@@ -162,7 +162,7 @@ const FoodPurchase = () => {
                 />
             </div>
             <div>
-                <label className="">Order Quantity:</label>
+                <label className="">Order Quantity <span className="text-red-600">(**)</span>:</label>
                 <br></br>
                 <input
                 type="number"

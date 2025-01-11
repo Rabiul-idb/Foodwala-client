@@ -17,23 +17,23 @@ const Footer = () => {
         </aside>
         <nav>
           <h6 className="footer-title">Services</h6>
-          <a className="link link-hover">Delivery System</a>
-          <a className="link link-hover">Certification</a>
-          <a className="link link-hover">Authentication</a>
-          <a className="link link-hover">Advertisement</a>
+          <Link to={'/aboutUs'} className="link link-hover">Delivery System</Link>
+          <Link to={'/aboutUs'} className="link link-hover">Certification</Link>
+          <Link to={'/aboutUs'} className="link link-hover">Authentication</Link>
+          <Link to={'/aboutUs'} className="link link-hover">Advertisement</Link>
         </nav>
         <nav>
           <h6 className="footer-title">Restaurant</h6>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
+          <Link to={'/aboutUs'} className="link link-hover">About us</Link>
+          <Link to={'/contact'} className="link link-hover">Contact</Link>
           <a className="link link-hover">Organic Food</a>
-          <a className="link link-hover">Foods</a>
+          <Link to={'/allFoods'} className="link link-hover">Foods</Link>
         </nav>
         <nav>
           <h6 className="footer-title">Legal</h6>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
+          <Link to={'/contact'} className="link link-hover">Terms of use</Link>
+          <Link to={'/contact'} className="link link-hover">Privacy policy</Link>
+          <Link to={'/contact'} className="link link-hover">Cookie policy</Link>
         </nav>
       </footer>
       <div className="border-t py-7 border-gray-300">

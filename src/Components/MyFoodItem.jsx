@@ -45,42 +45,82 @@ const MyFoodItem = ({item, foods, setFoods}) => {
        };
 
     return (
-        <div className="border rounded-xl p-5 shadow relative foodCard ">
-            <img src={foodImg} className="w-full rounded-xl object-cover hover:scale-105 duration-500" alt="" />
-            <div className="px-2">
-                <h2 className="font-bold text-xl mt-3 ">{foodName}</h2>
-                <div className="flex justify-between items-center flex-wrap gap-1 mt-3">
-                    <div>
-                        <p className="font-semibold text-base">Origin: {foodOrigin}</p>
-                        <p className="font-semibold text-base">Available Qty: {foodQty}</p>
-                    </div>
-                    <div>
-                        <Link
-                        to={`/food/foodDetails/${_id}`}
-                        className="btn text-green-500 text-lg btn-link "
-                        title="Food Details"
-                        >
-                        <FcViewDetails />
-                        </Link>
-                        <Link
-                         to={`/food/updateFoodInfo/${_id}`}
-                        className="btn text-blue-800 text-lg btn-link"
-                        title="edit"
-                        >
-                        <CiEdit />
-                        </Link>
-                        <button
-                         onClick={() => handleDelete(_id)}
-                        className="btn text-red-500 text-lg btn-link"
-                        title="delete"
-                        >
-                        <RiDeleteBin6Line />
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <p className="font-bold text-base bg-red-600 text-white px-2 absolute top-6 right-5 hidden price">Price: {foodPrice}$</p>
-        </div>
+
+            <tr key={_id} className="hover:bg-gray-100">
+              <td className="border border-gray-300 px-4 py-3">
+                <img
+                  src={foodImg}
+                  alt={foodName}
+                  className="w-full h-16 rounded object-cover"
+                />
+              </td>
+              <td className="border border-gray-300 px-4 py-2">{foodName}</td>
+              <td className="border border-gray-300 px-4 py-2">{foodOrigin}</td>
+              <td className="border border-gray-300 px-4 py-2">{foodQty}</td>
+              <td className="border border-gray-300 px-4 py-2">${foodPrice}</td>
+              <td className="border border-gray-300 px-4 py-2 flex justify-around pt-8 border-b-0 border-l-0 border-r-0">
+                <Link
+                  to={`/food/foodDetails/${_id}`}
+                  className="text-green-500 text-lg"
+                  title="Food Details"
+                >
+                  <FcViewDetails />
+                </Link>
+                <Link
+                  to={`/food/updateFoodInfo/${_id}`}
+                  className="text-blue-800 text-lg "
+                  title="Edit"
+                >
+                  <CiEdit />
+                </Link>
+                <button
+                  onClick={() => handleDelete(_id)}
+                  className="text-red-500 text-lg"
+                  title="Delete"
+                >
+                  <RiDeleteBin6Line />
+                </button>
+              </td>
+            </tr>
+      
+
+        // for card view
+        // <div className="border rounded-xl p-5 shadow relative foodCard ">
+        //     <img src={foodImg} className="w-full rounded-xl object-cover hover:scale-105 duration-500" alt="" />
+        //     <div className="px-2">
+        //         <h2 className="font-bold text-xl mt-3 ">{foodName}</h2>
+        //         <div className="flex justify-between items-center flex-wrap gap-1 mt-3">
+        //             <div>
+        //                 <p className="font-semibold text-base">Origin: {foodOrigin}</p>
+        //                 <p className="font-semibold text-base">Available Qty: {foodQty}</p>
+        //             </div>
+        //             <div>
+        //                 <Link
+        //                 to={`/food/foodDetails/${_id}`}
+        //                 className="btn text-green-500 text-lg btn-link "
+        //                 title="Food Details"
+        //                 >
+        //                 <FcViewDetails />
+        //                 </Link>
+        //                 <Link
+        //                  to={`/food/updateFoodInfo/${_id}`}
+        //                 className="btn text-blue-800 text-lg btn-link"
+        //                 title="edit"
+        //                 >
+        //                 <CiEdit />
+        //                 </Link>
+        //                 <button
+        //                  onClick={() => handleDelete(_id)}
+        //                 className="btn text-red-500 text-lg btn-link"
+        //                 title="delete"
+        //                 >
+        //                 <RiDeleteBin6Line />
+        //                 </button>
+        //             </div>
+        //         </div>
+        //     </div>
+        //     <p className="font-bold text-base bg-red-600 text-white px-2 absolute top-6 right-5 hidden price">Price: {foodPrice}$</p>
+        // </div>
     );
 };
 

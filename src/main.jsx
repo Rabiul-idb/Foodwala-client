@@ -19,6 +19,8 @@ import UpdateFoodInfo from './Pages/UpdateFoodInfo';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Error from './Pages/Error';
 import FoodPurchase from './Pages/FoodPurchase';
+import AboutUs from './Pages/AboutUs';
+import Contact from './Pages/Contact';
 
 
 const router = createBrowserRouter([
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
       {
         path: "/gallary",
         element: <Gallary></Gallary>
+      },
+      {
+        path: "/aboutUs",
+        element: <AboutUs></AboutUs>
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>
       },
       {
         path: "/addFood",

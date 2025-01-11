@@ -21,7 +21,7 @@ const TopMenus = () => {
                 Our top menu is a selection of our most popular dishes, carefully crafted to <br></br> showcase the best of
                 our culinary expertise. 
             </p>
-            <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 my-10">
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 my-10">
                 {
                     topFoods.map(item => <FoodItem
                     item ={item}

@@ -35,7 +35,7 @@ const Navbar = () => {
    }
 
     return (
-        <div className="  bg-[#fef5ee]">
+        <div className="bg-[#fef5ee] sticky top-0 z-20">
             <div className="navbar  flex justify-between items-center w-11/12 mx-auto">
             <div className="">
                 <img src={logo} className="w-12" alt="" />
@@ -48,8 +48,10 @@ const Navbar = () => {
                     {/* {
                         user?.email && (<li><NavLink to={"/dashboard"} className="text-base font-semibold">Dashboard</NavLink></li>) 
                     } */}
-                    <li><NavLink to={"/gallary"} className="text-base font-semibold">Gallary</NavLink></li>
 
+                    <li><NavLink to={"/gallary"} className="text-base font-semibold">Gallary</NavLink></li>
+                    <li><NavLink to={"/aboutUs"} className="text-base font-semibold">About Us</NavLink></li>
+                    <li><NavLink to={"/contact"} className="text-base font-semibold">Contact</NavLink></li>
                     
                 </ul>
             </div>
@@ -115,6 +117,8 @@ const Navbar = () => {
                             // user?.email && (<li><NavLink to={"/dashboard"} className="text-base font-semibold">Dashboard</NavLink></li>) 
                         }
                         <li><NavLink to={"/gallary"} className="text-base font-semibold">Gallary</NavLink></li>
+                        <li><NavLink to={"/aboutUs"} className="text-base font-semibold">About Us</NavLink></li>
+                        <li><NavLink to={"/contact"} className="text-base font-semibold">Contact</NavLink></li>
 
                     </ul>
                 </div>

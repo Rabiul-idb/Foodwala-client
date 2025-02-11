@@ -63,7 +63,7 @@ useEffect(() => {
             <option value="avaiQty">Available Qty.</option>
           </select>
         </div>
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 my-10">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 my-10">
           {allFoodData.map((item) => (
             <FoodItem item={item}></FoodItem>
           ))}

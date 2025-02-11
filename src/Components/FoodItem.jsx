@@ -14,7 +14,7 @@ const FoodItem = ({item}) => {
                         <p className="font-semibold text-base">Origin: {foodOrigin}</p>
                         <p className="font-semibold text-base">Available Qty: {foodQty}</p>
                     </div>
-                    <Link to={`/food/foodDetails/${_id}`} className="btn lg:text-lg bg-red-600 text-white hover:bg-red-700">Food Details</Link>
+                    <Link to={`/food/foodDetails/${_id}`} className="btn lg:text-lg bg-red-600 text-white hover:bg-red-700">View Details</Link>
                 </div>
             </div>
             <p className="font-bold text-base bg-red-600 text-white px-2 absolute top-6 right-5 hidden price">Price: {foodPrice}$</p>

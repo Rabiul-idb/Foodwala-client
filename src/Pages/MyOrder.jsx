@@ -16,7 +16,7 @@ const MyOrder = () => {
                 <h2 className="md:text-2xl text-xl font-semibold text-black text-center mt-2 mb-1">My Food Orders</h2>
                 
                 {
-                    orders.length > 0 ? <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 my-10">
+                    orders.length > 0 ? <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 my-10">
                     {
                         orders.map(item => <MyOrderItem
                              item={item} 

@@ -43,21 +43,21 @@ const MyOrderItem = ({item, orders, setOrders}) => {
     }
 
     return (
-        <div className="border rounded-xl p-5 shadow relative foodCard ">
+        <div className="border rounded-xl p-5 shadow relative foodCard hover:shadow-lg duration-300">
             <img src={foodImg} className="w-full rounded-xl object-cover hover:scale-105 duration-500" alt="" />
             <div className="px-2">
                 <h2 className="font-bold text-xl my-3 ">{foodName}</h2>
                 <p className="font-semibold text-base">Food Price: <span className="">{foodPrice}</span></p>
                 <p className="font-semibold text-base">Total Price: {totalPrice}</p>
                 <p className="font-semibold text-base">Ordered Qty: {orderQty}</p>
-                <p className="font-semibold text-base">Food Owner: {foodOwner}</p>
-                <p className="font-semibold text-base">Ordered Time: {orderedTime}</p>
+                <p className="font-semibold text-base">Owner: {foodOwner}</p>
+                <p className="font-semibold text-base">Time: {orderedTime}</p>
             
                 <button
                 onClick={() => handleDeleteOrder(_id)}
                 className="btn text-red-500 btn-sm md:text-lg border border-red-600 mt-3"
                 title="delete"
-                > Delete Order
+                > Delete
                 <RiDeleteBin6Line />
                 </button>
                     

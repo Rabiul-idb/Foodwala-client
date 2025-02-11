@@ -1,6 +1,16 @@
 import stayBanner from "../assets/images/ad-ban-bg.png";
+import { ToastContainer, toast } from 'react-toastify';
 
 const StayConnected = () => {
+
+    const handleSendEmail = (e) =>{
+        e.preventDefault();
+        toast("Your Email is sent successfully", {
+            position: "top-center",
+            autoClose: 3000,
+        });
+        e.target.reset();
+    }
     return (
         <div className="relative">
             <img src={stayBanner} className="min-h-[220px] object-cover" alt="" />
@@ -10,14 +20,16 @@ const StayConnected = () => {
                         <h2 className="lg:text-3xl md:text-2xl text-xl text-black font-bold lg:mb-4">Stay Informed About Special Offers</h2>
                         <p className="text-black lg:text-lg text-base lg:mb-4">For Exclusive Deals, Coupons, News and More!</p>
                     </div>
-                    <div className="">
+                    <form onSubmit={handleSendEmail}>
                         <input type="email"
                         className="input w-3/5 bg-white text-red-600 pr-12 rounded-none"
-                        placeholder="Enter your Email" />
+                        placeholder="Enter your Email" name="email"
+                        required/>
                         <button className="btn bg-red-600 hover:bg-red-700 rounded-none text-white text-lg">Send</button>
-                    </div>
+                    </form>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

@@ -13,7 +13,7 @@ const Footer = () => {
           >
             Foodwala
           </Link>
-          <p className="">Providing the Best Services Since 2024</p>
+          <p className="">Providing the Best Services Since 2025</p>
         </aside>
         <nav>
           <h6 className="footer-title">Services</h6>
@@ -38,7 +38,7 @@ const Footer = () => {
       </footer>
       <div className="border-t py-7 border-gray-300">
         <p className="text-center text-sm text-gray-600 ">
-          &copy; 2024 Foodwala. All rights reserved by MD. Rabiul Islam.
+          &copy; 2025 Foodwala. All rights reserved by MD. Rabiul Islam.
         </p>
       </div>
     </div>

@@ -35,7 +35,7 @@ const Navbar = () => {
    }
 
     return (
-        <div className="bg-[#fef5ee] sticky top-0 z-20">
+        <div className="bg-[#fef5ee] sticky top-0 z-20 shadow-lg">
             <div className="navbar  flex justify-between items-center w-11/12 mx-auto">
             <div className="">
                 <img src={logo} className="w-12" alt="" />

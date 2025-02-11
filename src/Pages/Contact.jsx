@@ -1,7 +1,20 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import animationData from "../assets/LottieFiles/lottie-contact.json";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+
+  const handleContactForm = (e)=>{
+    e.preventDefault();
+    Swal.fire({
+      title: 'Contact Form',
+      text: 'Your message has been sent',
+      icon: 'success',
+      confirmButtonText: 'OK',
+    });
+    e.target.reset();
+  }
+
   return (
    <div className="bg-[#fef5ee] py-20">
     <span className="md:text-xl text-lg font-bold font-lobster text-red-600 text-center mb-10 block">
@@ -19,7 +32,7 @@ const Contact = () => {
         </p>
       </div>
       <div className="card bg-base-100 w-full max-w-md shrink-0 shadow-2xl">
-        <form className="card-body">
+        <form onSubmit={handleContactForm} className="card-body">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Your Name</span>

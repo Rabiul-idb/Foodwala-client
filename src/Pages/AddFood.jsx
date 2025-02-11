@@ -64,7 +64,7 @@ const AddFood = () => {
 
   return (
     <div className="bg-[#fef5ee] py-6">
-        <span className='md:text-xl text-lg font-bold font-lobster text-red-600 pt-1 text-center block'>Add</span>
+        <span className='md:text-xl text-lg font-bold font-lobster text-red-600 pt-1 text-center block'>Add Food</span>
       <h2 className="md:text-2xl text-xl font-semibold text-black text-center mb-6 mt-2">
         Add Food with the required field
       </h2>

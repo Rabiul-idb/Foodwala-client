@@ -51,7 +51,7 @@ const MyFoodItem = ({item, foods, setFoods}) => {
                 <img
                   src={foodImg}
                   alt={foodName}
-                  className="w-full h-16 rounded object-cover"
+                  className="w-16 rounded object-cover"
                 />
               </td>
               <td className="border border-gray-300 px-4 py-2">{foodName}</td>

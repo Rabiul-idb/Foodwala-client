@@ -9,7 +9,7 @@ const About = () => {
         <div className=" bg-[#fef5ee] py-20">
             <div className="w-11/12 mx-auto grid gap-10 lg:grid-cols-2 grid-cols-1 items-center">
                 <figure>
-                    <img src={aboutImg} alt="" />
+                    <img src={aboutImg} alt="about-img" className='w-full' />
                 </figure>
                 <div>
                     <span className='md:text-xl text-lg font-bold font-lobster text-red-600 pt-3 block'>About Us</span>

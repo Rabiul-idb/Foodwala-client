@@ -6,7 +6,7 @@ import StayConnected from "../Components/StayConnected";
 
 const MainLayOut = () => {
     return (
-        <div className="max-w-[1440px] mx-auto">
+        <div className="max-w-[2400px] mx-auto">
             <Navbar></Navbar>
             <Outlet></Outlet>
             <StayConnected></StayConnected>

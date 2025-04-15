@@ -27,7 +27,7 @@ const AboutUs = () => {
 
         <div className=" grid gap-5 lg:grid-cols-2 grid-cols-1 items-center">
           <figure>
-            <img src={aboutImg} alt="" />
+            <img src={aboutImg} alt="" className="w-full pr-8" />
           </figure>
           <div>
             <div className="max-w-4xl mx-auto mt-10">
